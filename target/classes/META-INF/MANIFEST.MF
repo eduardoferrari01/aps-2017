@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Implementation-Title: aps2017
 Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: eduardoferrari
+Built-By: wandersonsantiago
 Implementation-Vendor-Id: br.com.aps
 Build-Jdk: 1.8.0_121
 Implementation-URL: http://projects.spring.io/spring-boot/aps2017/
