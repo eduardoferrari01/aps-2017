@@ -26,9 +26,10 @@ public class TituloService {
 		tituloReposirty.save(titulo);
 	}
 	
-	public Collection<Titulo> buscarTodos()
+	public Page<Titulo> buscarTodos(PageRequest page)
 	{
-		return tituloReposirty.findAll();
+		
+		return tituloReposirty.findAll(page);
 	}
 	
 	public Titulo buscarPorId(Long id)
@@ -36,9 +37,4 @@ public class TituloService {
 		return tituloReposirty.findOne(id);
 	}
 	
-	public Page<Titulo> buscarPorPaginacao(int pagina,int tamanho)
-	{
-		Pageable pageable = new PageRequest(pagina,tamanho);
-		return tituloReposirty.findAll(pageable);
-	}
 }

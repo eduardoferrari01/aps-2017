@@ -27,7 +27,7 @@
   <div class="preloader"> <i class="fa fa-circle-o-notch fa-spin"></i></div>
   <!--/.preloader-->
 
-  <header id="home">
+  <header id="home" ng-controller="IndexController">
     <div id="home-slider" class="carousel slide carousel-fade" data-ride="carousel">
       <div class="carousel-inner">
         <div class="item active" style="background-image: url(components/images/slider/3.jpg)">
@@ -85,7 +85,8 @@
       </div>
     </div><!--/#main-nav-->
   </header><!--/#home-->
-  <div ng-include="'views/inicial.html'"></div>
+
+ <div ng-include="'views/inicial.html'"></div> 
   <div ng-include="'views/paralax.html'"></div>
   <div ng-include="'views/portifolio.html'"></div>
   <div ng-include="'views/desenvolvedores.html'"></div>

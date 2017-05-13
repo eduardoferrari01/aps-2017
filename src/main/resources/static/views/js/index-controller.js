@@ -5,27 +5,19 @@
 			self.totalElements = 0;
 			$scope.maxResults = 15;
 
-			listarNovidadesArtigos();
-			//listarporCategoria(0,4, 'FRON_END');
-			listarBackArtigos();
-			listarBancoArtigos();
-			listarSOArtigos();
-			listarFrontArtigos();
+			
+			listarporServicos(0,8);
+			
    
 
-			    function listarNovidadesArtigos() {
-			    	IndexService.listarNovidadesArtigos().then(function(t) {
-					$scope.listarNovidadesArtigo = t.content;
-				}, function(errResponse) {
-				});
-			}
-			;
+			   
 
-			function listarporCategoria(pages, maxResults, categoria) {
+			function listarporServicos(pages, maxResults ) {
+				console.log("OI");	
 				self.totalPages = [];
 				self.getPage=pages;	
-				IndexService.listarporCategoria(pages, maxResults, categoria).then(function(t) {
-					$scope.listarFrontArtigos = t.content;
+				IndexService.listarporServicos(pages, maxResults).then(function(t) {
+					$scope.servicos = t.content;
 					$scope.totalPages = t.totalPages;
 					self.totalElements = t.totalElements;
 					for(i = 0; i < $scope.totalPages ; i++){
@@ -33,38 +25,8 @@
 					}
 				}, function(errResponse) {
 				});
-			}
-			;
-			function listarFrontArtigos() {
-				IndexService.listarFrontArtigos().then(function(t) {
-					$scope.listarFrontArtigos = t.content;
-				}, function(errResponse) {
-				});
-			}
-			;
-			function listarBackArtigos() {
-				IndexService.listarBackArtigos().then(function(t) {
-					$scope.listarBackArtigos = t.content;
-				}, function(errResponse) {
-				});
-			}
-			;
-
-			function listarBancoArtigos() {
-				IndexService.listarBancoArtigos().then(function(t) {
-					$scope.listarBancoArtigos = t.content;
-				}, function(errResponse) {
-				});
-			}
-			;
-
-			function listarSOArtigos() {
-				IndexService.listarSOArtigos().then(function(t) {
-					$scope.listarSOArtigos = t.content;
-				}, function(errResponse) {
-				});
-			}
-			;
+			};
+			
 						
 					
 					
