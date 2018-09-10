@@ -1,4 +1,4 @@
-Trabalhos Academicos
+Trabalhos Acadêmico
 
 Atividades Práticas Supervisionadas (APS)
 
