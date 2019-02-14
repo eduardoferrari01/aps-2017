@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Implementation-Title: aps2017
 Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: wandersonsantiago
+Built-By: eduardof
 Implementation-Vendor-Id: br.com.aps
-Build-Jdk: 1.8.0_121
+Build-Jdk: 1.8.0_202
 Implementation-URL: http://projects.spring.io/spring-boot/aps2017/
 Created-By: Maven Integration for Eclipse
 Implementation-Vendor: Pivotal Software, Inc.
