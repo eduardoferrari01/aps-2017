@@ -1,13 +1,11 @@
 package br.com.aps.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
-
 import org.springframework.data.jpa.domain.AbstractPersistable;
 
-import com.fasterxml.jackson.databind.annotation.JsonValueInstantiator;
+import jakarta.persistence.Entity;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
 
 @Entity
 public class Titulo extends AbstractPersistable<Long> {
@@ -16,7 +14,7 @@ public class Titulo extends AbstractPersistable<Long> {
 	@ManyToOne
 	@JoinColumn(name = "id_tipo")
 	private Tipo tipo;
-	
+
 	@OneToOne
 	@JoinColumn(name = "id_mensagem")
 	private Mensagem mensagem;
@@ -54,6 +52,5 @@ public class Titulo extends AbstractPersistable<Long> {
 	public void setCaminhoImagem(String caminhoImagem) {
 		this.caminhoImagem = caminhoImagem;
 	}
-	
-	
+
 }

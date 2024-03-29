@@ -1,8 +1,8 @@
 package br.com.aps.entity;
 
-import javax.persistence.Entity;
-
 import org.springframework.data.jpa.domain.AbstractPersistable;
+
+import jakarta.persistence.Entity;
 
 @Entity
 public class Tipo extends AbstractPersistable<Long>{

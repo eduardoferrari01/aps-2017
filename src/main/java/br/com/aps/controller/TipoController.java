@@ -21,28 +21,26 @@ public class TipoController {
 	@Autowired
 	private TipoService tipoService;
 
-	
 	@PostMapping
-	public ResponseEntity<Tipo> salvar(@RequestBody Tipo tipo)
-	{
+	public ResponseEntity<Tipo> salvar(@RequestBody Tipo tipo) {
 		tipoService.salvar(tipo);
 		return new ResponseEntity<Tipo>(HttpStatus.CREATED);
 	}
+
 	@PutMapping
-	public ResponseEntity<Tipo> alterar(@RequestBody Tipo tipo)
-	{
+	public ResponseEntity<Tipo> alterar(@RequestBody Tipo tipo) {
 		tipoService.salvar(tipo);
 		return new ResponseEntity<Tipo>(HttpStatus.CREATED);
 	}
+
 	@GetMapping
-	public ResponseEntity<Iterable<Tipo>> buscarTodos()
-	{
-		return new  ResponseEntity<Iterable<Tipo>>(tipoService.buscarTodos(),HttpStatus.OK);
+	public ResponseEntity<Iterable<Tipo>> buscarTodos() {
+		return new ResponseEntity<Iterable<Tipo>>(tipoService.buscarTodos(), HttpStatus.OK);
 	}
+
 	@GetMapping("/{id}")
-	public ResponseEntity<Tipo> buscarPorId(@PathVariable Long id)
-	{
-		return new ResponseEntity<Tipo>(tipoService.buscarPorId(id),HttpStatus.OK);
+	public ResponseEntity<Tipo> buscarPorId(@PathVariable Long id) {
+		return new ResponseEntity<Tipo>(tipoService.buscarPorId(id), HttpStatus.OK);
 	}
-	
+
 }
